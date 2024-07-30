@@ -1,2 +1,2 @@
 # EpiGePT Project
-![EpiGePT overview](https://github.com/user-attachments/assets/ddfa44d0-59b0-4d59-a2d0-bfd9085bf462)
+![EpiGePT overview](https://github.com/user-attachments/assets/6b2cf334-89a6-4478-9276-1e7e88685b2c)
