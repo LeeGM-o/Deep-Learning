@@ -7,7 +7,7 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 * size: (128000(128 kb), 4)   
 * one-hot matrix(A = [0, 0, 0, 1], C = [0, 1, 0, 0], G = [0, 0, 1, 0], T = [0, 0, 0, 1])
 #### 2) TF module
-* HOCOMOCO database: Potential binding sites for a set of 711 human transcription factors were scanned in the input bin using the Homer tool. We combined two vectors (motif features & expression features) made as follows and linked the results to the output of the sequence module.
+* HOCOMOCO database: Potential binding sites for a set of 711 human transcription factors were scanned in the input bin using the Homer tool. We combined two vectors (motif features & expression features) made as follows and concatenated the results to the output of the sequence module.
 > 1. selected the maximum score of reported binding status for each transcription factor to obtain a vector of 711 dimensions as the motif feature for each DNA bin.
 > 2. For gene expression, focused on log-transformed TPM values of the 711 transcription factors and obtained a vector of 711 dimensions after quantile normalization as the expression feature.
 #### 3) Transformer module
