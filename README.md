@@ -4,8 +4,8 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 
 ## Component
 ### 1) Sequence module   
-- size: (128000(128 kb), 4)   
-- one-hot matrix(A = [0, 0, 0, 1], C = [0, 1, 0, 0], G = [0, 0, 1, 0], T = [0, 0, 0, 1])
+* size: (128000(128 kb), 4)   
+* one-hot matrix(A = [0, 0, 0, 1], C = [0, 1, 0, 0], G = [0, 0, 1, 0], T = [0, 0, 0, 1])
 ### 2) TF module
 ### 3) Transformer module
 ### 4) Multi-task module
