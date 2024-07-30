@@ -4,6 +4,7 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 
 ## Component
 * Sequence module
+size: (128000(128 kb), 4)
 * TF module
 * Transformer module
 * Multi-task module
