@@ -29,6 +29,6 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 * Python==3.6.9
 * Pyfasta==0.5.2
 
-'''
+```
 import os
-'''
+```
