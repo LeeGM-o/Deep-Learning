@@ -16,7 +16,7 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 > 2. Each genomic bin has an embedded representation that combines the sequence information with cell-type-specific features with dimension of 968.
 * For position embedding, we employed absolute position embedding to represent the positional information of the 1000 genomic bins in the input 128kbp DNA sequence, with dimensions of (1000, 968).   
 * Each Transformer encoder includes a multi-head self-attention mechanism and a feed-forward neural network. For self-attention in each head, the calculation is based on the matrix operation.   
-![attention function](https://github.com/user-attachments/assets/7e7f1bb4-1f7a-4d03-8ada-6c0b38e21941)
+![attention function](https://github.com/user-attachments/assets/08306d98-cc6a-4576-aa3a-b8010611ec5f)
 ![multi-head attention](https://github.com/user-attachments/assets/60b9f5d0-a433-4a8a-9c7f-ca5788afb029)
 > 1. set Nt(layers of Transformer encoder) to 16 for the chromatin accessible prediction experiments
 > 2. set Nt(layers of Transformer encoder) to 12 for the chromatin state classification and multiple chromatin signals prediction experiments.
