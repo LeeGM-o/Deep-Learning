@@ -12,7 +12,7 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 > 2. For gene expression, focused on log-transformed TPM values of the 711 transcription factors and obtained a vector of 711 dimensions after quantile normalization as the expression feature.
 #### 3) Transformer module
 * The input word embedding (X) of the transformer encoder = (Sequence length, embedding dim) -> (1000, 968).
-> Input genomic bin sequence has a length of 1000
+> Input genomic bin sequence has a length of 1000   
 > Each genomic bin has an embedded representation that combines the sequence information with cell-type-specific features with dimension of 968.
 * For position embedding, we employed absolute position embedding to represent the positional information of the 1000 genomic bins in the input 128kbp DNA sequence, with dimensions of (1000, 968).
 * Each Transformer encoder includes a multi-head self-attention mechanism and a feed-forward neural network. For self-attention in each head, the calculation is based on the matrix operation.
