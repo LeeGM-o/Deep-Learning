@@ -1,1 +1,10 @@
-dd
+### Initialization
+import torch
+import os
+from pyfasta import Fasta
+import numpy as np
+import pandas as pd
+os.environ['CUDA_VISIBLE_DEVICES']='0'
+from model import EpiGePT
+from model.utils import *
+from model.config import *
