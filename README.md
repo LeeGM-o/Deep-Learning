@@ -21,7 +21,8 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 > 1. set Nt(layers of Transformer encoder) to 16 for the chromatin accessible prediction experiments
 > 2. set Nt(layers of Transformer encoder) to 12 for the chromatin state classification and multiple chromatin signals prediction experiments.
 #### 4) Multi-task prediction module
-
+* For regression model, the output layer uses a linear transformation and use mean square error (MSE) as the loss function.
+* For classification model, the output layer uses a linear transformation combined with a sigmoid function, and use the cross-entropy loss for classification experiments.
 ## Requirements
 * Pytorch-lightning==1.2.10
 * Pytorch==1.7.1
