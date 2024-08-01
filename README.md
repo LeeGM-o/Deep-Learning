@@ -28,3 +28,7 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 * Pytorch==1.7.1
 * Python==3.6.9
 * Pyfasta==0.5.2
+## Install
+```
+git clone https://github.com/ZjGaothu/EpiGePT
+```
