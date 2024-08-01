@@ -8,6 +8,8 @@ os.environ['CUDA_VISIBLE_DEVICES']='0'
 from model_hg38 import EpiGePT
 from model_hg38.utils import *
 from model_hg38.config import *
+# pytorch, pytorch-lightning, pyfasta, tensorflow, sklearn, keras, pandas, transformers, dataset
+
 
 #2. Load pretrained model
 model = EpiGePT.EpiGePT(WORD_NUM,TF_DIM,BATCH_SIZE)
