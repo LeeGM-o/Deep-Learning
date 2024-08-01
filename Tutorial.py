@@ -5,9 +5,9 @@ from pyfasta import Fasta
 import numpy as np
 import pandas as pd
 os.environ['CUDA_VISIBLE_DEVICES']='0'
-from model import EpiGePT
-from model.utils import *
-from model.config import *
+from model_hg38 import EpiGePT
+from model_hg38.utils import *
+from model_hg38.config import *
 
 #2. Load pretrained model
 model = EpiGePT.EpiGePT(WORD_NUM,TF_DIM,BATCH_SIZE)
