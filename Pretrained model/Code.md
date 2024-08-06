@@ -10,25 +10,7 @@ bash Download_raw_data.bash  -c <CELL_ID> -r -c -d
 -d  download chromatin accessible readscount from DNase-seq data (.bam)
 -c  download readscount from ChIP-seq data (.bam)
 ```
-one can also run ```bash Download_raw_data.bash  -h``` to show the script instructions. Note that `.bam` files downloading may take time. After downloading the raw data, the raw data folder will be organized by `cell-assay-experiment-file` order. Note that each experiment may contain multiple replicates. See an example of the folder tree:
 
-```
-data/
-    |-- raw_data/
-    |   |-- 1/
-    |   |   |-- dseq/
-    |   |   |   |-- ENCSR000EIE/
-    |   |   |   |   |-- ENCFF953HEA.bed.gz
-    |   |   |   |   |-- ENCFF983PML.bam
-    |   |   |   |-- ENCSR000ELW/
-    |   |   |   |   |...
-    |   |   |-- rseq/
-    |   |   |   |-- ENCSR000BXY/
-    |   |   |   |   |-- ENCFF110IED.tsv
-    |   |   |   |   |-- ENCFF219FVQ.tsv
-    |   |   |   |-- ENCSR000BYH/
-    |   |   |   |   |...
-```
 
 ### Data preprocessing
 
