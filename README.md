@@ -34,5 +34,6 @@ git clone https://github.com/ZjGaothu/EpiGePT
 ```
 ## Link
 * The processed training data for an hg38 version, containing 105 cell types of EpiGePT, has been uploaded to the [Download](https://health.tsinghua.edu.cn/epigept/download.php) page. In addition, a detailed tutorial on the usage of this model can be accessed [here](https://health.tsinghua.edu.cn/epigept/tutorial.php).
-## Reference
+## Citation
 * Zijing Gao, Qiao Liu, Wanwen Zeng, Wing Hung Wong and Rui Jiang. [EpiGePT: a Pretrained Transformer model for epigenomics](https://www.biorxiv.org/content/10.1101/2023.07.15.549134v2.full)
+* [https://github.com/ZjGaothu/EpiGePT](https://github.com/ZjGaothu/EpiGePT)
