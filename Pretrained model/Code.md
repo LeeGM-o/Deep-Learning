@@ -28,7 +28,7 @@ Additionally, users can also obtain the motif binding score of motifscan results
 python preprocess.py
 ```
 
-As for the motif binding score, we conducted scanning of 711 transcription factors across the entire genome and integrated them into the [EpiGePT-online](http://health.tsinghua.edu.cn/epigept/) platform, enabling users to directly perform predictions through the web interface. The file of genomic regions and samll demo data for motif score and target data can be found [here](data).
+As for the motif binding score, we conducted scanning of 711 transcription factors across the entire genome and integrated them into the [EpiGePT-online](http://health.tsinghua.edu.cn/epigept/) platform, enabling users to directly perform predictions through the web interface. The file of genomic regions and samll demo data for motif score and target data can be found [here](data_hg38).
 
 
 ### Model training
@@ -57,7 +57,7 @@ CUDA_VISIBLE_DEVICES=0 python train_DNase.py --train True --cell_idxs_path data
 [cell_idxs_path] -- indexes of cell types used for training
 ```
 
-Train cell type index file and test cell type index file can be found as [data/train_idxs_5_fold.npy](./data_hg38/train_idxs_5_fold.npy) and [data/test_idxs_5_fold.npy](./data_hg38/test_idxs_5_fold.npy). When training the DNase-specific pre-trained model with a batch size of 128, it takes approximately 2-3 hours to complete one epoch of training.
+Train cell type index file and test cell type index file can be found as **data/train_idxs_5_fold.npy** and **data/test_idxs_5_fold.npy**. When training the DNase-specific pre-trained model with a batch size of 128, it takes approximately 2-3 hours to complete one epoch of training.
 
 
 ### Model testing
