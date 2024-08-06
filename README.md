@@ -33,4 +33,4 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 git clone https://github.com/ZjGaothu/EpiGePT
 ```
 ## Link
-* The processed training data for an hg38 version, containing 105 cell types of EpiGePT, has been uploaded to the [Download page](https://health.tsinghua.edu.cn/epigept/download.php). In addition, a detailed tutorial on the usage of this model can be accessed [here](https://health.tsinghua.edu.cn/epigept/tutorial.php).
+* The processed training data for an hg38 version, containing 105 cell types of EpiGePT, has been uploaded to the [Download](https://health.tsinghua.edu.cn/epigept/download.php) page. In addition, a detailed tutorial on the usage of this model can be accessed [here](https://health.tsinghua.edu.cn/epigept/tutorial.php).
