@@ -1,7 +1,7 @@
 ### Data downloading
 
-We provided `Download_raw_data.sh` for download RNA-seq data (.tsv), DNase-seq data (.bam) and ChIP-seq data (.bam) from the ENCODE project
-We pre-defined cell type ID from 1-37. After downloading the meta data from ENCODE website (`head -n 1 files.txt|xargs -L 1 curl -O -L`), one can run the following script:
+We provided `Download_raw_data.sh` for download RNA-seq data (.tsv), DNase-seq data (.bam) and ChIP-seq data (.bam) from the ENCODE project.
+After downloading the meta data from ENCODE website, one can run the following script:
 
 ```python
 bash Download_raw_data.bash  -c <CELL_ID> -r -c -d
@@ -20,7 +20,9 @@ After downloading the raw DNase-seq, RNA-seq and ChIP-seq data, you can align BA
 bash runme.sh
 ```
 
-Then we merge multiple replicate of RNA-seq data by taking the average expression of each gene across replicates in a cell type. As for DNase-seq data and ChIP-seq data, we only keep bins that appear in more than half of the replicates with respect to a cell type. One can run the following scripts to merge relicates of both DNase-seq, ChIP-seq and RNA-seq data, and generate TF gene expression matrix (N x C where N is the number of TFs and C is the number of cell types).
+Then we merge multiple replicate of RNA-seq data by taking the average expression of each gene across replicates in a cell type. As for DNase-seq data and ChIP-seq data, we only keep bins that appear in more than half of the replicates with respect to a cell type.
+
+**One can run the following scripts to merge relicates of both DNase-seq, ChIP-seq and RNA-seq data, and generate TF gene expression matrix (N x C where N is the number of TFs and C is the number of cell types).**
 
 Additionally, users can also obtain the motif binding score of motifscan results by homer tool.
 
@@ -28,13 +30,11 @@ Additionally, users can also obtain the motif binding score of motifscan results
 python preprocess.py
 ```
 
-As for the motif binding score, we conducted scanning of 711 transcription factors across the entire genome and integrated them into the [EpiGePT-online](http://health.tsinghua.edu.cn/epigept/) platform, enabling users to directly perform predictions through the web interface. The file of genomic regions and samll demo data for motif score and target data can be found [here](data_hg38).
-
 
 ### Model training
 
 
-The main python script `train.py` is used for implementing EpiGePT for predicting 8 epigenomic profiles. Model architecture for EpiGePT can be find in `./model/EpiGePT.py`. Data loader or data sampler can be find in `./model/dataset.py`.
+The main python script `train.py` is used for implementing EpiGePT for predicting **8 epigenomic profiles**. Model architecture for EpiGePT can be find in `./model_hg38/EpiGePT.py`. Data loader or data sampler can be find in `./model_hg38/dataset.py`.
 
 One can run the following commond to train a EpiGePT model, the preprocessed data of TF expression value can be downloaded from the `Supplementary Materials` of EpiGePT, the motif score file and target data for training used in the paper can be download from the Download page of [EpiGePT-online](http://health.tsinghua.edu.cn/epigept/download.php).
 
