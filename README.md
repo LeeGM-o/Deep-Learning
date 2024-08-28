@@ -5,7 +5,7 @@ EpiGePT is a pretrained transformer-based model for predicting context-specific 
 ## Component
 #### 1) Sequence module   
 * size: (128000(128 kb), 4)   
-* one-hot matrix(A = [0, 0, 0, 1], C = [0, 1, 0, 0], G = [0, 0, 1, 0], T = [0, 0, 0, 1])
+* one-hot matrix(A = [1, 0, 0, 0], C = [0, 1, 0, 0], G = [0, 0, 1, 0], T = [0, 0, 0, 1])
 * Contains five 1-dimentional convolutional blocks to extract DNA sequence features. Each block includes a convolutional layer and a maxpooling layer.  The first convolutional layer considers the input channels as 4 and performs convolution along the sequence direction(The input sequence features are one-hot embeddings of size L × 4). After 5 maxpooling layers, Rectified linear units (ReLU) are used after each convolution operation for keeping positive activations and setting negative activation values to zeros. By reducing the input length by 128 times through pooling operations, this module effectively compresses the input information while retaining essential features. Sequence features were then concatenated with TF expression features.
 #### 2) TF module
 * HOCOMOCO database: Potential binding sites for a set of 711 human transcription factors were scanned in the input bin using the Homer tool. We combined two vectors (motif features & expression features) made as follows and concatenated the results to the output of the sequence module.
